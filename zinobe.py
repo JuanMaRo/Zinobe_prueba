@@ -8,13 +8,6 @@ import hashlib
 import time
 
 # from unicodedata import normalize
-# Listas que serán los resultados de los puntos 1, 2, 3 y 4  para despues incluirlas en el data frame
-
-# regions = ['africa', 'americas', 'asia', 'europe', 'oceania'] # Este debería ser el resultado del punto 1
-# s = set()
-# regions = list(s)
-
-
 
 def get_regions():
     url = "https://restcountries-v1.p.rapidapi.com/all"
@@ -39,8 +32,7 @@ def encrypt(word):
     encode = hashlib.sha1(word.encode())
     # la palabra en valor hexadecimal
     value = encode.hexdigest()
-    return value
-    #print(value) # ESTE VALOR SERA INCLUIDO EN LA TABLA por medio de un append a una lista
+    return value # ESTE VALOR SERA INCLUIDO EN LA TABLA por medio de un append a una lista
 
 
 def get_region_data(regions):
