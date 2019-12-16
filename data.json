@@ -3,36 +3,44 @@
     "country": "Algeria",
     "language": "AF4F4762F9BD3F0F4A10CAF5B6E63DC4CE543724",
     "region": "africa",
-    "time": "0.51 ms"
+    "time": "0.54 ms"
   },
   {
     "country": "Anguilla",
     "language": "649DF08A448EE3FA90F3746BAAF6B0907DF42C91",
     "region": "americas",
-    "time": "0.51 ms"
+    "time": "0.5 ms"
   },
   {
     "country": "Afghanistan",
     "language": "CC50B3253C9EC78D83C0178CBD9AFF6A66D8CED8",
     "region": "asia",
-    "time": "0.49 ms"
+    "time": "0.51 ms"
   },
   {
     "country": "\u00c5land Islands",
     "language": "04A422D38C95415CECE1AC86E1AD2A1030048C03",
     "region": "europe",
-    "time": "0.54 ms"
+    "time": "0.51 ms"
   },
   {
     "country": "American Samoa",
     "language": "649DF08A448EE3FA90F3746BAAF6B0907DF42C91",
     "region": "oceania",
-    "time": "0.49 ms"
+    "time": "0.5 ms"
   },
   {
     "country": "Antarctica",
     "language": "649DF08A448EE3FA90F3746BAAF6B0907DF42C91",
     "region": "polar",
-    "time": "0.51 ms"
+    "time": "0.5 ms"
+  }
+]
+[
+  {
+    "max": 0.54,
+    "media": 0.51,
+    "min": 0.5,
+    "sum": 3.06
   }
 ]

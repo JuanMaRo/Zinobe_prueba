@@ -7,6 +7,7 @@ import json
 import hashlib
 import time
 
+# from unicodedata import normalize
 # Listas que serán los resultados de los puntos 1, 2, 3 y 4  para despues incluirlas en el data frame
 
 # regions = ['africa', 'americas', 'asia', 'europe', 'oceania'] # Este debería ser el resultado del punto 1
@@ -20,7 +21,7 @@ def get_regions():
 
     headers = {
         'x-rapidapi-host': "restcountries-v1.p.rapidapi.com",
-        'x-rapidapi-key': "61c4e77f8emsh8ff8611e3bca36ep1c186cjsn277ad302653c"
+        'x-rapidapi-key': "Aqui-va-la-clave"
         }
 
     response = requests.request("GET", url, headers=headers).json()
@@ -110,8 +111,9 @@ def dataframe_to_sql_to_json(df):
     for row in result:
         items.append({'region': row[0], 'country': row[1], 'language': row[2], 'time': row[3]})
 
-    with open('data.json', 'w') as outfile:
-        json.dump(items, outfile, indent=2, sort_keys=True)
+    with open('data.json', 'w') as json_file:
+        json.dump(items, json_file, indent=2, sort_keys=True)
+        json_file.write('\n')
 
 
 def series_to_sql_to_json(s):
@@ -132,10 +134,13 @@ def series_to_sql_to_json(s):
     for i in series:
         values.append(i)
 
-    items_dict = dict(zip(keys, values))
+    # cree un diccionario con clave valor para hacer mas legible el json
+    items = [dict(zip(keys, values))]
 
-    with open('data_time.json', 'w') as outfile:
-        json.dump(items_dict, outfile, indent=2, sort_keys=True)
+    # se agregan los resultados a data.json para crear un solo archivo
+    with open('data.json', 'a+') as json_file:
+        # json_file.write('\n Resultados del tiempo \n')
+        json.dump(items, json_file, indent=2, sort_keys=True)
   
 
 if __name__ == '__main__':
